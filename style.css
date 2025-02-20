@@ -1,22 +1,24 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
+    font-family: Arial, sans-serif; 
     text-align: center;
     background-color: rgb(43, 14, 88);
+    color: white;
 }
 
-#raca{
+#raca {
     padding: 10px;
     border-radius: 15px;
     font-size: 25px;
     border: none;
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white;
 }
-
-
 
 #pesquisar {
     background-color: transparent;
@@ -27,26 +29,29 @@ body{
     padding: 15px;
     border-radius: 10px;
     font-size: 25px;
-  
+    transition: all 0.3s ease; 
 }
 
-#pesquisar:hover{
+#pesquisar:hover {
     color: rgb(0, 0, 0);
     border: 2px solid rgb(12, 10, 1);
-    
+    background-color: rgb(255, 255, 255, 0.3); 
 }
-
-#galeria img {
-    width: 450px;
-    height: 450px;
-    border: 5px solid rgb(8, 7, 1);
-    border-radius: 20px;
-    
-}
-
 
 #galeria {
     margin-top: 15px;
-    display: columns;
-    columns: 4;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 15px; 
+    justify-items: center;
+}
+
+#galeria img {
+    width: 100%;
+    max-width: 450px; 
+    height: 450px;
+    border: 5px solid rgb(8, 7, 1);
+    border-radius: 20px;
+    object-fit: cover; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
